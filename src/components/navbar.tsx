@@ -4,12 +4,11 @@ const links = [
     { name: "HOME", path: "/" },
     { name: "PROJECT", path: "/project" },
     { name: "ABOUT", path: "/about" },
-    { name: "CONTACT", path: "/contact" },
 ]
 
 export default function Navbar() {
     return (
-        <div className="absolute top-0 left-0 w-full flex justify-center">
+        <div className="absolute top-0 left-0 w-full flex justify-center z-2">
             <nav className="flex gap-10 py-4 font-medium text-black">
                 {links.map((link) => (
                     <NavLink
