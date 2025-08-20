@@ -34,7 +34,7 @@ export default function Home() {
                     {/* Conteneur droit */}
                     <div className="flex-1 p-6 rounded-lg flex items-center justify-center opacity-0 animate-fadeIn delay-400">
                         <img
-                            src="../../public/Avatar.png"
+                            src="/Avatar.png"
                             alt="avatar"
                             className="max-w-full h-auto rounded-full"
                         />

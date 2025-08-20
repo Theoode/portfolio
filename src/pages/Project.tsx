@@ -8,24 +8,45 @@ export default function Project() {
         {
             title: "Portfolio",
             description: "Un site moderne en React/Tailwind pour présenter mes compétences et projets.",
-            github: "https://github.com/tonprofil/portfolio",
+            github: "https://github.com/Theoode/portfolio",
             type: "Frontend",
             tech: ["React"]
         },
         {
-            title: "App de gestion EPI",
-            description: "Application web permettant la gestion des stocks d’EPI pour les opérateurs.",
-            github: "https://github.com/tonprofil/gestion-epi",
+            title: "Site e-commerce",
+            description: "Site de vente de vêtement en ligne avec panel admin et paiement via api.",
+            github: "https://github.com/Theoode/ecommerce",
             type: "Fullstack",
-            tech: ["React", "Node"]
+            tech: ["PHP","Laravel"]
         },
         {
             title: "Logiciel de gestion de stock magasin",
             description: "Application permettant de gérer le stock d'un magasin et de le relier à un serveur siège pour les mises a jours.",
             github: "https://github.com/Theoode/Bricomerlin",
             type: "Backend",
-            tech: ["Java"]
+            tech: ["Java","MySQL"]
         },
+        {
+            title: "Partie Backend du site de reservation pour un cinema",
+            description: "Site web permettant de réserver des places pour une seance de cinéma, c'est un projet réalisé dans le cadre de mes études universitaires",
+            github: "https://github.com/Theoode/UniversiteDomain",
+            type: "Backend",
+            tech: ["C#","MySQL"]
+        },
+        {
+            title: "Partie Frontend du site de reservation pour un cinema",
+            description: "Site web permettant de réserver des places pour une seance de cinéma, c'est un projet réalisé dans le cadre de mes études universitaires",
+            github: "https://github.com/Theoode/",
+            type: "Frontend",
+            tech: ["React"]
+        },
+        {
+            title: "Application de voyage Android",
+            description: "Réalisation d'une application permettant de retracer et partager l'itinéraire d'un voyage grace à des points GPS",
+            github: "https://github.com/Theoode/ProjetAndroid",
+            type: "Backend",
+            tech: ["Java"]
+        }
     ];
 
     const allTypes = ["Tous", ...new Set(projects.map(p => p.type))];
@@ -82,8 +103,7 @@ export default function Project() {
                                     activeTech === tech
                                         ? "bg-green-600 border-green-600"
                                         : "bg-gray-800 border-gray-600 hover:bg-gray-700"
-                                }`}
-                            >
+                                }`}>
                                 {tech}
                             </button>
                         ))}
@@ -91,28 +111,21 @@ export default function Project() {
                 </div>
 
                 {/* Grille des projets */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-fadeIn delay-500 opacity-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredProjects.map((project, index) => (
                         <div
                             key={index}
-                            className={`bg-gray-800 p-6 rounded-2xl shadow-lg hover:scale-105 transform transition duration-300 flex flex-col justify-between animate-fadeIn delay-${index * 100}`}
+                            className="bg-gray-800 p-6 rounded-2xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-xl opacity-0 animate-fadeIn"
+                            style={{ animationDelay: `${index * 150}ms`, animationFillMode: "forwards" }}
                         >
                             <div>
                                 <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
                                 <p className="text-gray-300 mb-6">{project.description}</p>
 
-                                <span className="inline-block px-3 py-1 mb-3 text-sm bg-blue-700 rounded-full">
-                    {project.type}
-                </span>
-
+                                <span className="inline-block px-3 py-1 mb-3 text-sm bg-blue-700 rounded-full">{project.type}</span>
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.tech.map((t, i) => (
-                                        <span
-                                            key={i}
-                                            className="px-2 py-1 text-sm bg-gray-700 rounded-lg"
-                                        >
-                            {t}
-                        </span>
+                                        <span key={i} className="px-2 py-1 text-sm bg-gray-700 rounded-lg">{t}</span>
                                     ))}
                                 </div>
                             </div>
@@ -130,6 +143,7 @@ export default function Project() {
                         </div>
                     ))}
                 </div>
+
             </div>
 
             <Footer />
