@@ -65,9 +65,7 @@ export default function Project() {
             <Navbar />
 
             <div className="flex-1 container mx-auto px-6 py-16">
-                <h1 className="text-4xl font-bold text-center mb-6 animate-fadeIn">
-                    Mes Projets
-                </h1>
+
                 <p className="text-center text-black text-2xl mb-10 max-w-2xl mx-auto animate-fadeIn delay-100">
                     Voici une sélection de projets que j’ai réalisés.
                     Utilisez les filtres ci-dessous pour explorer selon le type
