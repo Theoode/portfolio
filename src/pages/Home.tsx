@@ -1,6 +1,11 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { FaArrowRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom"
+
+const links = [
+    { name: "PROJECT", path: "/project" },
+]
 
 export default function Home() {
     return (
@@ -30,9 +35,14 @@ export default function Home() {
                                             Sur ce site, tu pourras découvrir mes projets, mes compétences et comment me contacter, on pourrait sûrement travailler ensemble !
                                         </p>
                                     </div>
-                                    <a href="/project" className="text-2xl font-bold mt-8 flex items-center gap-2 text-black opacity-0 animate-fadeIn delay-300">
+                                    <NavLink
+                                        key={links[0].path}
+                                        to={links[0].path}
+                                        className="text-2xl font-bold mt-8 flex items-center gap-2 text-black opacity-0 animate-fadeIn delay-300"
+                                    >
                                         Voir mes projets <FaArrowRight />
-                                    </a>
+                                    </NavLink>
+
                                 </div>
 
                                 {/* Conteneur droit */}
