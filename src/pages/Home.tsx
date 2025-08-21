@@ -27,13 +27,17 @@ export default function Home() {
                                     <h2 className="text-5xl font-bold mb-4 opacity-0 animate-fadeIn delay-100">
                                         Bienvenue sur mon portfolio !
                                     </h2>
-                                    <div className="flex flex-col gap-5 mt-5  opacity-0 animate-fadeIn delay-200">
+                                    <div className="flex text-xl flex-col gap-5 mt-5 opacity-0 animate-fadeIn delay-200">
                                         <p>
-                                            Je m'appelle Théo et je suis développeur, j'aime aussi les designs modernes et les expériences utilisateur soignées.
+                                            Bonjour, je m'appelle Théo et je suis développeur junior.
                                         </p>
                                         <p>
-                                            Sur ce site, tu pourras découvrir mes projets, mes compétences et comment me contacter, on pourrait sûrement travailler ensemble !
+                                            Sur ce portfolio, tu pourras découvrir mes projets, explorer mes compétences techniques et créatives, et savoir comment me contacter.
                                         </p>
+                                        <p>
+                                            Je serais ravi que l'on puisse collaborer sur de nouveaux projets stimulants !
+                                        </p>
+
                                     </div>
                                     <NavLink
                                         key={links[0].path}
