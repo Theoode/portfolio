@@ -4,8 +4,8 @@ import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
     return (
-        <div className="min-h-screen text-white flex flex-col">
-            <section>
+        <div className="min-h-screen text-white flex flex-col bg-[#F9F9F9]">
+            <section className="mb-20">
                 <div className="wave">
                     <span></span>
                     <span></span>
@@ -15,10 +15,10 @@ export default function Home() {
                         <div className="flex-1 flex items-start justify-center pt-24 ">
 
                             {/* Conteneur avec deux enfants */}
-                            <div className="flex w-full max-w-6xl gap-4 flex-col md:flex-row items-center">
+                            <div className="flex w-full max-w-6xl gap-4 flex-col md:flex-row items-center sm:mt-24">
 
                                 {/* Conteneur gauche */}
-                                <div className="flex-1 text-black p-6 rounded-lg flex flex-col items-center md:items-start text-center md:text-left">
+                                <div className="flex-1 text-black p-6 rounded-lg flex flex-col items-center md:items-start text-center md:text-left ">
                                     <h2 className="text-5xl font-bold mb-4 opacity-0 animate-fadeIn delay-100">
                                         Bienvenue sur mon portfolio !
                                     </h2>
@@ -37,10 +37,13 @@ export default function Home() {
 
                                 {/* Conteneur droit */}
                                 <div className="flex-1 p-6 rounded-lg flex items-center justify-center opacity-0 animate-fadeIn delay-400">
-                                    <img src="/Avatar.png" alt="avatar"
-                                        className="max-w-full h-auto rounded-full border-1 border-black bg-white shadow"
+                                    <img
+                                        src="/Avatar.png"
+                                        alt="avatar"
+                                        className="w-56 sm:w-60 md:w-74 lg:w-90 xl:w-100 h-auto rounded-full border border-black bg-white shadow "
                                     />
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -49,7 +52,7 @@ export default function Home() {
             </section>
 
             {/* Footer avec réseaux sociaux */}
-            <div className="opacity-0 animate-fadeIn delay-800">
+            <div className="opacity-0 animate-fadeIn delay-800 ">
                 <Footer/>
             </div>
         </div>

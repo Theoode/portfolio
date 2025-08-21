@@ -9,13 +9,9 @@
 
 body {
     margin: 0;
-    min-width: 320px;
-    min-height: 100vh;
     background-color: #F9F9F9;
     font-family: 'Visuelt', sans-serif;
     color: rgba(255, 255, 255, 0.87);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 @media (prefers-color-scheme: light) {
@@ -47,20 +43,20 @@ html {
 section {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh; /* hauteur minimale = 100% de l'écran */
+    height: auto;       /* hauteur auto pour s'adapter */
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 }
+
 section .wave {
     position: absolute;
     left: 0;
     width: 100%;
     height: 100%;
-    background: #ededed;
-    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+    background-color: #F9F9F9;
     transition: 0.5s;
 }
 section .wave span {
