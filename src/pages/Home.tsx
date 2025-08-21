@@ -1,5 +1,6 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
+import { NavLink } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 
 export default function Home() {
@@ -34,11 +35,12 @@ export default function Home() {
                                         </p>
 
                                     </div>
-                                    <a href="/project"
+                                    <NavLink
+                                        to="/project"
                                         className="text-2xl font-bold mt-8 flex items-center gap-2 text-black opacity-0 animate-fadeIn delay-300"
                                     >
                                         Voir mes projets <FaArrowRight />
-                                    </a>
+                                    </NavLink>
 
                                 </div>
 
